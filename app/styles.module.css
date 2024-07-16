@@ -1,0 +1,8 @@
+.main {
+  background: #1F1F28;
+  background-image: radial-gradient(#DCD7BA 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -20px -20px;
+  height: max-content;
+  min-height: 100vh;
+}
