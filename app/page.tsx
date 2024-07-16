@@ -5,7 +5,7 @@ import Starscape from "./ui/Starscape";
 
 export default function Home() {
   return (
-    <main className="bg-bg">
+    <main>
         <Starscape densityRatio={.3} defaultAlpha={.1} proximityRatio={.25}/>
         <Header />
     </main>
