@@ -54,12 +54,11 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
                 starsRef.current.forEach(star => {
                     context.fillStyle = `hsla(0, 100%, 100%, ${star.alpha})`
                     context.beginPath()
-                    context.arc(
+                    context.fillRect(
                         star.x,
                         star.y,
-                        (star.size / 2) * star.scale,
-                        0,
-                        Math.PI * 2
+                        star.size * star.scale,
+                        star.size * star.scale
                     )
                     context.fill()
                 })
@@ -108,6 +107,6 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
         }
     }, [defaultAlpha, densityRatio, proximityRatio, sizeLimit, scaleLimit])
     return (
-        <canvas ref={canvasRef} className="fixed bg-bg" style={{zIndex: -1}}/>
+        <canvas ref={canvasRef} className="fixed top-0 bg-bg" style={{zIndex: -1}}/>
     )
 }

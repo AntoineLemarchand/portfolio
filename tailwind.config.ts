@@ -12,6 +12,7 @@ const config: Config = {
         'bg-dim': '#181820',
         'fg': '#c0caf5',
         'fg-dim': '#C8C093',
+        'black': '#000',
     },
     keyframes: {
         'float': {
