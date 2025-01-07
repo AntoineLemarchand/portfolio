@@ -33,20 +33,20 @@ export default function About() {
     };
 
     return (
-        <div className="w-9/12 min-w-80 mx-auto h-screen flex justify-center items-center relative">
+        <div id="about" className="w-9/12 min-w-80 mx-auto min-h-screen flex justify-center items-center relative">
             <div>
-                <Tilt className="w-44 m-5 p-3 bg-fg flex flex-col items-center float-left" options={options}>
+                <Tilt className="w-44 md:m-5 mx-auto p-3 bg-fg flex flex-col items-center md:float-left" options={options}>
                     <Image className="ps-2 pt-2 bg-bg" src="/profile.svg" alt="Profile" width={150} height={150} />
                     <p className={`${delicious.className} text-black mt-4 rotate-2 text-3xl text-center`}>
                         Antoine Lemarchand
                     </p>
                 </Tilt>
-                <div className="inline">
+                <div className="md:inline block">
                     <h3 className="text-4xl text-fg">
                         About me
                     </h3>
                     <p className='text-xl mb-2'>
-                        I am a software engineer based in France. I have tend to appreciate, as one does, clean, maintainable and efficient code.
+                        I am a software engineer based in France. I appreciate clean, maintainable and efficient code.
                         I have a strong interest in both front-end and back-end development.
                         I mainly use JavaScript and TypeScript framework, but I am sometimes working with other technologies (Golang, PHP...).
                     </p>
