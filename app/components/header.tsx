@@ -4,9 +4,10 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGitAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Header() {
-    const buttonStyle = "text-6xl text-fg border-4 border-fg p-2 ms-4 size-fit hover:bg-fg hover:text-bg transition-all duration-300 ease-in-out cursor-pointer";
+    const buttonStyle = "text-5xl text-fg-dim  size-fit transition-all duration-300 ease-in-out cursor-pointer hover:scale-110";
     function scrollToElement(id: string) {
         const element = document.getElementById(id);
         if (element) {
@@ -14,17 +15,19 @@ export default function Header() {
         }
     }
     return (
-        <div className="min-h-screen flex lg:flex-row flex-col justify-center items-center relative w-11/12 mx-auto gap-2">
+        <div className="min-h-screen w-auto flex lg:flex-row flex-col justify-center items-center relative px-8 mx-auto gap-2">
             <Magnet magnetStrength={-10}>
-                <Image src="/sprites/isle.svg" alt="Me on a floating island" width={300} height={300} className="animate-float"/>
+                <Image src="/sprites/isle.svg" alt="Me on a floating island" width={300} height={300} className="animate-float w-auto h-80" priority/>
             </Magnet>
             <div className="h-fit lg:text-left text-center">
-                <h1 className="text-6xl text-fg">Antoine Lemarchand</h1>
-                <h2 className="text-4xl text-fg-dim">Full stack developer</h2>
-                <div className="h-fit flex lg:justify-end justify-center py-4">
-                    <a className={buttonStyle}><FontAwesomeIcon icon={faGitAlt}/></a>
-                    <a className={buttonStyle}><FontAwesomeIcon icon={faLinkedin}/></a>
-                    <a className={buttonStyle}><FontAwesomeIcon icon={faEnvelope}/></a>
+                <h1 className="text-4xl sm:text-6xl text-fg ">Antoine Lemarchand</h1>
+                <h2 className="text-3xl sm:text-5xl animate-text bg-gradient-to-r from-accent-red via-accent-peach to-accent-green bg-clip-text text-transparent">Full-stack web developer</h2>
+                <div className="h-fit flex gap-8 justify-center sm:justify-end py-4">
+                    <Link className={buttonStyle + ' hover:text-accent-red'} href="https://github.com/antoinelemarchand">
+                        <FontAwesomeIcon icon={faGitAlt}/>
+                    </Link>
+                    <a className={buttonStyle + ' hover:text-accent-sky'}><FontAwesomeIcon icon={faLinkedin}/></a>
+                    <a className={buttonStyle + ' hover:text-accent-green'}><FontAwesomeIcon icon={faEnvelope}/></a>
                 </div>
                 <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
                     <Magnet magnetStrength={10}>
