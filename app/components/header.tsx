@@ -6,6 +6,8 @@ import { faGitAlt, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faChevronDown, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
+import data from "@/app/content.json";
+
 export default function Header() {
     const buttonStyle = "text-5xl text-fg-dim  size-fit transition-all duration-300 ease-in-out cursor-pointer hover:scale-110";
     function scrollToElement(id: string) {
@@ -23,11 +25,15 @@ export default function Header() {
                 <h1 className="text-4xl sm:text-6xl text-fg ">Antoine Lemarchand</h1>
                 <h2 className="text-3xl sm:text-5xl animate-text bg-gradient-to-r from-accent-red via-accent-peach to-accent-green bg-clip-text text-transparent">Full-stack web developer</h2>
                 <div className="h-fit flex gap-8 justify-center sm:justify-end py-4">
-                    <Link className={buttonStyle + ' hover:text-accent-red'} href="https://github.com/antoinelemarchand">
+                    <Link className={buttonStyle + ' hover:text-accent-red'} href={data.github}>
                         <FontAwesomeIcon icon={faGitAlt}/>
                     </Link>
-                    <a className={buttonStyle + ' hover:text-accent-sky'}><FontAwesomeIcon icon={faLinkedin}/></a>
-                    <a className={buttonStyle + ' hover:text-accent-green'}><FontAwesomeIcon icon={faEnvelope}/></a>
+                    <Link className={buttonStyle + ' hover:text-accent-sky'} href={data.linkedin}>
+                        <FontAwesomeIcon icon={faLinkedin}/>
+                    </Link>
+                    <Link className={buttonStyle + ' hover:text-accent-green'} href={"mailto:" + data.email}>
+                        <FontAwesomeIcon icon={faEnvelope}/>
+                    </Link>
                 </div>
                 <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
                     <Magnet magnetStrength={10}>

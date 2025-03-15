@@ -1,44 +1,70 @@
 'use client';
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-export default function Projects() {
-    const scrollRef = useRef<HTMLDivElement | null>(null);
-    const horizontalRef = useRef<HTMLDivElement | null>(null);
+import data from "@/app/content.json";
 
-    const { scrollYProgress } = useScroll({
-        target: scrollRef,
-        offset: ["start start", "end end"],
-    });
-
-    const xTransform = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]);
-    const slowedXTransform = useTransform(xTransform, (value) => `${parseFloat(value) * 0.5}%`); // Scale down the movement speed
+const ProjectSection = ({content}: {content: React.ReactNode}) => {
+    const ref = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress } = useScroll({target: ref, offset: ["start end", "end start"]});
+    const opacity = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0, 1, 1, 0]);
+    const rotateX = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [-90, 0, 0, 90]);
 
     return (
-        <div ref={scrollRef} className="relative w-full h-[500vh]">
-            <h3 className="text-4xl text-fg-dim w-fit mb-4 sticky top-0 bg-white p-4 z-10">
+        <section ref={ref}>
+            <motion.div style={{opacity, rotateX}}>
+                {content}
+            </motion.div>
+        </section>
+    );
+};
+
+export default function Projects() {
+
+    const colors = [
+        "accent-green",
+        "accent-peach",
+        "accent-red",
+        "accent-rosewater"
+    ];
+
+    return (
+        <div className="w-9/12 min-w-80 relative mx-auto">
+            <h3 className="text-6xl text-fg-dim w-fit bg-white mb-32">
                 <span className="text-accent-sky">P</span>rojects
             </h3>
 
-            <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-                <motion.div
-                    ref={horizontalRef}
-                    style={{ x: xTransform }}
-                    className="flex space-x-8"
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
-                        <div key={num} className="flex flex-col items-center justify-center w-screen h-screen flex-shrink-0 snap-center">
-                            <Image src="/profile.png" alt={`profile-${num}`} width={400} height={400} />
-                            <h2 className="text-2xl font-bold">#{String(num).padStart(3, "0")}</h2>
-                            <p className="text-center max-w-md">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                            </p>
+            {data.projects.map((project: {
+                name: string, description: string, url: string, image: string
+                }, num: number) => (
+                <ProjectSection key={num} content={
+                    <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item mb-52 max-w-6xl mx-auto"} >
+                        <Image src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
+                            className={`border-4 border-${colors[num % colors.length]} rounded-sm`} />
+                        <div className="flex flex-col justify-between ps-2 py-8 bg-bg border-4 border-t-0 sm:border-t-4 sm:border-s-0 border-bg-dim w-full rounded-e-sm">
+                            <div>
+                                <h2 className={`text-2xl font-bold mb-4 underline decoration-${colors[num % colors.length]}`}>{project.name}</h2>
+                                <p>
+                                    {project.description}
+                                </p>
+                            </div>
+                            <div className="flex justify-around w-1/2 mx-auto">
+                                <a href={project.url} className="text-accent-sky text-center">
+                                    <span className="text-sm mx-1 underline">
+                                        Source
+                                    </span>
+                                </a>
+                                <a href={project.url} className="text-accent-sky text-center">
+                                    <span className="text-sm mx-1 underline">
+                                        Demo
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                    ))}
-                </motion.div>
-            </div>
+                    </div>
+                } />
+            ))}
         </div>
     );
 }

@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { Delicious_Handrawn } from 'next/font/google';
 import VanillaTilt from 'vanilla-tilt';
 
+import data from "@/app/content.json";
+
 const delicious = Delicious_Handrawn({
   subsets: ['latin'],
   weight: '400',
@@ -45,15 +47,11 @@ export default function About() {
                     <h3 className="text-4xl text-fg-dim">
                         <span className="text-accent-red">A</span>bout me
                     </h3>
-                    <p className='text-xl mb-2'>
-                        I am a software engineer based in France. I appreciate clean, maintainable and efficient code.
-                        I have a strong interest in both front-end and back-end development.
-                        I mainly use JavaScript and TypeScript framework, but I am sometimes working with other technologies (Golang, PHP...).
-                    </p>
-                    <p className='text-xl'>
-                        I like to work on personal projects, such as this website, to learn new technologies and improve my skills.
-                        I am also interested in music production and pixel art (or at least trying as you can see !).
-                    </p>
+                    {data.abouts.map((about: string, num: number) => (
+                        <p key={num} className="text-xl mb-2">
+                            {about}
+                        </p>
+                    ))}
                 </div>
             </div>
         </div>
