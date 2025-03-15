@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="md:inline block min-h-screen w-9/12 min-w-80 mx-auto py-32">
-        <h3 className="text-4xl text-fg-dim w-fit mb-32">
+        <h3 className="text-6xl text-fg-dim w-fit mb-32">
             <span className="text-accent-green">C</span>ontact
         </h3>
 
