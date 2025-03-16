@@ -6,12 +6,11 @@ import Image from "next/image";
 const ProjectSection = ({content}: {content: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({target: ref, offset: ["start end", "end start"]});
-    const opacity = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0, 1, 1, 0]);
-    const rotateX = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [-90, 0, 0, 90]);
+    const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.95, 1, 1, 0.95]);
 
     return (
         <section ref={ref}>
-            <motion.div style={{opacity, rotateX}}>
+            <motion.div style={{scale}}>
                 {content}
             </motion.div>
         </section>
@@ -20,11 +19,18 @@ const ProjectSection = ({content}: {content: React.ReactNode}) => {
 
 export default function Projects({content}: {content: any}) {
 
-    const colors = [
-        "accent-green",
-        "accent-peach",
-        "accent-red",
-        "accent-rosewater"
+    const borders = [
+        "border-accent-green",
+        "border-accent-peach",
+        "border-accent-red",
+        "border-accent-rosewater"
+    ];
+
+    const textColors = [
+        "text-accent-green",
+        "text-accent-peach",
+        "text-accent-red",
+        "text-accent-rosewater"
     ];
 
     return (
@@ -39,10 +45,10 @@ export default function Projects({content}: {content: any}) {
                 <ProjectSection key={num} content={
                     <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item mb-52 max-w-6xl mx-auto"} >
                         <Image src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
-                            className={`border-4 border-${colors[num % colors.length]} rounded-sm`} />
+                            className={`border-4 ${borders[num % borders.length]} rounded-sm`} />
                         <div className="flex flex-col justify-between ps-2 py-8 bg-bg border-4 border-t-0 sm:border-t-4 sm:border-s-0 border-bg-dim w-full rounded-e-sm">
                             <div className="text-fg">
-                                <h2 className={`text-2xl font-bold mb-4 underline decoration-${colors[num % colors.length]}`}>{project.name}</h2>
+                                <h2 className={`text-2xl font-bold mb-4 underline ${textColors[num % textColors.length]}`}>{project.name}</h2>
                                 <p>
                                     {project.description}
                                 </p>
