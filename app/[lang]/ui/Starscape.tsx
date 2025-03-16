@@ -15,31 +15,31 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
         if (!canvas) return
             contextRef.current = canvas.getContext('2d')
         const LOAD = () => {
-            if (!vminRef.current || !scaleMapperRef.current || !alphaMapperRef.current) {
-                vminRef.current = Math.min(window.innerHeight, window.innerWidth)
-                const STAR_COUNT = Math.floor(vminRef.current * densityRatio)
-                scaleMapperRef.current = gsap.utils.mapRange(
-                    0,
-                    vminRef.current * proximityRatio,
-                    scaleLimit,
-                    1
-                );
-                alphaMapperRef.current = gsap.utils.mapRange(
-                    0,
-                    vminRef.current * proximityRatio,
-                    1,
-                    defaultAlpha
-                );
-                canvas.width = window.innerWidth
-                canvas.height = window.innerHeight
-                starsRef.current = new Array(STAR_COUNT).fill(undefined).map(() => ({
-                    x: gsap.utils.random(0, window.innerWidth, 1),
-                    y: gsap.utils.random(0, window.innerHeight, 1),
-                    size: gsap.utils.random(1, sizeLimit, 1),
-                    scale: 1,
-                    alpha: gsap.utils.random(0.1, defaultAlpha, 0.1),
-                }))
-            }
+            vminRef.current = Math.min(window.innerHeight, window.innerWidth)
+            const STAR_COUNT = Math.floor(vminRef.current * densityRatio)
+            scaleMapperRef.current = gsap.utils.mapRange(
+                0,
+                vminRef.current * proximityRatio,
+                scaleLimit,
+                1
+            );
+            alphaMapperRef.current = gsap.utils.mapRange(
+                0,
+                vminRef.current * proximityRatio,
+                1,
+                defaultAlpha
+            );
+
+            canvas.width = window.innerWidth
+            canvas.height = window.innerHeight
+
+            starsRef.current = new Array(STAR_COUNT).fill(undefined).map(() => ({
+                x: gsap.utils.random(0, window.innerWidth, 1),
+                y: gsap.utils.random(0, window.innerHeight, 1),
+                size: gsap.utils.random(1, sizeLimit, 1),
+                scale: 1,
+                alpha: gsap.utils.random(0.1, defaultAlpha, 0.1),
+            }))
         }
 
         const RENDER = () => {
@@ -100,10 +100,10 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
         document.addEventListener('pointermove', UPDATE)
         document.addEventListener('pointerleave', EXIT)
         return () => {
-          window.removeEventListener('resize', LOAD)
-          document.removeEventListener('pointermove', UPDATE)
-          document.removeEventListener('pointerleave', EXIT)
-          gsap.ticker.remove(RENDER)
+            window.removeEventListener('resize', LOAD)
+            document.removeEventListener('pointermove', UPDATE)
+            document.removeEventListener('pointerleave', EXIT)
+            gsap.ticker.remove(RENDER)
         }
     }, [defaultAlpha, densityRatio, proximityRatio, sizeLimit, scaleLimit])
     return (
