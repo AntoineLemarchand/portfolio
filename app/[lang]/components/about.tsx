@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { Delicious_Handrawn } from 'next/font/google';
 import VanillaTilt from 'vanilla-tilt';
 
-import data from "@/app/content.json";
-
 const delicious = Delicious_Handrawn({
   subsets: ['latin'],
   weight: '400',
@@ -25,7 +23,7 @@ function Tilt(props: any) {
   return <div ref={tilt} {...rest} />;
 }
 
-export default function About() {
+export default function About( { content }: { content: any } ) {
     const options = {
         reverse: true,
         max: 7,
@@ -43,11 +41,11 @@ export default function About() {
                 <Tilt className="w-44 md:mx-5 md:mb-0 mb-5 mx-auto p-3 bg-accent-rosewater flex flex-col items-center md:float-left" options={options}>
                     <Image className="ps-2 pt-2 bg-fg-dim" src="/profile.svg" alt="Profile" width={150} height={150} />
                     <p className={`${delicious.className} text-black mt-4 rotate-3 text-3xl text-center`}>
-                        Antoine Lemarchand
+                        {content.name}
                     </p>
                 </Tilt>
                 <div className="md:inline block">
-                    {data.abouts.map((about: string, num: number) => (
+                    {content.abouts.map((about: string, num: number) => (
                         <p key={num} className="text-xl mb-2">
                             {about}
                         </p>

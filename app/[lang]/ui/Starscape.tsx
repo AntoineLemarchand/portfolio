@@ -7,8 +7,8 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
     const contextRef = useRef<CanvasRenderingContext2D | null>(null)
     const starsRef = useRef<{ x: number; y: number; size: number; scale: number; alpha: number }[]>([])
     const vminRef = useRef<number | null>(null)
-    const scaleMapperRef = useRef<(value: number) => number>()
-    const alphaMapperRef = useRef<(value: number) => number>()
+    const scaleMapperRef = useRef<(value: number) => number>(undefined)
+    const alphaMapperRef = useRef<(value: number) => number>(undefined)
 
     useEffect(() => {
         const canvas = canvasRef.current

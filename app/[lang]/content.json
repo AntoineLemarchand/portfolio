@@ -1,0 +1,52 @@
+{
+    "en": {
+        "name": "Antoine Lemarchand",
+        "title": "Full stack web developer",
+        "github": "https://github.com/antoinelemarchand",
+        "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+        "email": "antoine.lemarchand@mailbox.org",
+        "abouts": [
+            "I am a software engineer based in France. I appreciate clean, maintainable and efficient code. I have a strong interest in both front-end and back-end development. I mainly use JavaScript and TypeScript framework, but I am sometimes working with other technologies (Golang, PHP...).",
+            "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. I am also interested in music production and pixel art (or at least trying as you can see !)."
+        ],
+        "projects": [
+            {
+                "name": "Fract-ol",
+                "description": "A fractal visualization tool written in C. I allows to display multiple fractals. The displayed fractal can be zoomed and panned using the mouse.",
+                "url": "https://github.com/antoinelemarchand/fract-ol",
+                "image": "/projects/fract-ol.png"
+            },
+            {
+                "name": "MiniRT",
+                "description": "A minimal ray tracer written in C. The software displays a 3d scene based on an input file describing shapes and light sources. The user can then move inside the scene using the arrow keys.",
+                "url": "https://github.com/antoinelemarchand/minirt",
+                "image": "/projects/minirt.png"
+            }
+        ]
+    },
+    "fr": {
+        "name": "Antoine Lemarchand",
+        "title": "Développeur web Full stack",
+        "github": "https://github.com/antoinelemarchand",
+        "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+        "email": "antoine.lemarchand@mailbox.org",
+        "abouts": [
+            "Je suis un développeur web basé en France. J'apprécie le code propre, maintenable et performant. J'ai un intérêt fort pour les développements front et back. Je principalement utilise JavaScript et TypeScript, mais je suis parfois en mesure de travailler avec d'autres technologies (Golang, PHP...).",
+            "J'aime travailler sur des projets personnels, tels que ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Je suis également intéressé par la production de musique et l'art pixel (ou au moins essayer comme vous pouvez voir !)."
+        ],
+        "projects": [
+            {
+                "name": "Fract-ol",
+                "description": "Un outil de visualisation fractale écrit en C. J'autorise la création de plusieurs fractales. Le fractal affiché peut être zoomé et déplacé en utilisant la souris.",
+                "url": "https://github.com/antoinelemarchand/fract-ol",
+                "image": "/projects/fract-ol.png"
+            },
+            {
+                "name": "MiniRT",
+                "description": "Un rayon tracé minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
+                "url": "https://github.com/antoinelemarchand/minirt",
+                "image": "/projects/minirt.png"
+            }
+        ]
+    }
+}

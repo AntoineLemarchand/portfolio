@@ -3,8 +3,6 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-import data from "@/app/content.json";
-
 const ProjectSection = ({content}: {content: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({target: ref, offset: ["start end", "end start"]});
@@ -20,7 +18,7 @@ const ProjectSection = ({content}: {content: React.ReactNode}) => {
     );
 };
 
-export default function Projects() {
+export default function Projects({content}: {content: any}) {
 
     const colors = [
         "accent-green",
@@ -35,7 +33,7 @@ export default function Projects() {
                 <span className="text-accent-sky">P</span>rojects
             </h3>
 
-            {data.projects.map((project: {
+            {content.projects.map((project: {
                 name: string, description: string, url: string, image: string
                 }, num: number) => (
                 <ProjectSection key={num} content={
