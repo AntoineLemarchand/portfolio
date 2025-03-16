@@ -4,11 +4,10 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Starscape from "./ui/Starscape";
 
-import content from "./content.json";
-
 export default async function Home(props: {params: Promise<{lang: string}>}) {
   const params = await props.params;
-  const localizedContent = content[params.lang];
+  const jsonContent: { [key: string]: any } = await import("./content.json");
+  const localizedContent = jsonContent[params.lang];
 
   return (
     <main className="flex flex-col justify-center">

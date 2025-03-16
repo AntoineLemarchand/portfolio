@@ -39,7 +39,7 @@ export default function Projects({content}: {content: any}) {
                 <span className="text-accent-sky">P</span>rojects
             </h3>
 
-            {content.projects.map((project: {
+            {content?.projects.map((project: {
                 name: string, description: string, url: string, image: string
                 }, num: number) => (
                 <ProjectSection key={num} content={

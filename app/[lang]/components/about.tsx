@@ -41,11 +41,11 @@ export default function About( { content }: { content: any } ) {
                 <Tilt className="w-44 md:mx-5 md:mb-0 mb-5 mx-auto p-3 bg-accent-rosewater flex flex-col items-center md:float-left" options={options}>
                     <Image className="ps-2 pt-2 bg-fg-dim" src="/profile.svg" alt="Profile" width={150} height={150} />
                     <p className={`${delicious.className} text-black mt-4 rotate-3 text-3xl text-center`}>
-                        {content.name}
+                        {content?.name}
                     </p>
                 </Tilt>
                 <div className="md:inline block">
-                    {content.abouts.map((about: string, num: number) => (
+                    {content?.abouts.map((about: string, num: number) => (
                         <p key={num} className="text-xl mb-2 text-fg">
                             {about}
                         </p>
