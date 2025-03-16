@@ -41,7 +41,7 @@ export default function Projects({content}: {content: any}) {
                         <Image src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
                             className={`border-4 border-${colors[num % colors.length]} rounded-sm`} />
                         <div className="flex flex-col justify-between ps-2 py-8 bg-bg border-4 border-t-0 sm:border-t-4 sm:border-s-0 border-bg-dim w-full rounded-e-sm">
-                            <div>
+                            <div className="text-fg">
                                 <h2 className={`text-2xl font-bold mb-4 underline decoration-${colors[num % colors.length]}`}>{project.name}</h2>
                                 <p>
                                     {project.description}

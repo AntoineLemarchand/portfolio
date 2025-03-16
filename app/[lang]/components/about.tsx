@@ -46,7 +46,7 @@ export default function About( { content }: { content: any } ) {
                 </Tilt>
                 <div className="md:inline block">
                     {content.abouts.map((about: string, num: number) => (
-                        <p key={num} className="text-xl mb-2">
+                        <p key={num} className="text-xl mb-2 text-fg">
                             {about}
                         </p>
                     ))}

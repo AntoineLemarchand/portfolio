@@ -6,8 +6,9 @@
         "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
         "email": "antoine.lemarchand@mailbox.org",
         "abouts": [
-            "I am a software engineer based in France. I appreciate clean, maintainable and efficient code. I have a strong interest in both front-end and back-end development. I mainly use JavaScript and TypeScript framework, but I am sometimes working with other technologies (Golang, PHP...).",
-            "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. I am also interested in music production and pixel art (or at least trying as you can see !)."
+            "I am a software engineer based in France. I believe that developer experience is a key factor in the success of a project.",
+            "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. From my work, i participate in the development of open source projects.",
+            "I am also interested in the field of computer graphics, pixel art and music production among other things."
         ],
         "projects": [
             {
@@ -31,8 +32,9 @@
         "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
         "email": "antoine.lemarchand@mailbox.org",
         "abouts": [
-            "Je suis un développeur web basé en France. J'apprécie le code propre, maintenable et performant. J'ai un intérêt fort pour les développements front et back. Je principalement utilise JavaScript et TypeScript, mais je suis parfois en mesure de travailler avec d'autres technologies (Golang, PHP...).",
-            "J'aime travailler sur des projets personnels, tels que ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Je suis également intéressé par la production de musique et l'art pixel (ou au moins essayer comme vous pouvez voir !)."
+            "Je suis un développeur informatique de l'école de commerce de Paris. Je crois que l'expérience de développement est un facteur clé de succès d'un projet.",
+            "J'aime travailler sur des projets personnels, tels que ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. De mon travail, je participe au développement de projets open source.",
+            "Je suis également intéressé par le domaine de la graphique, l'art pixel et la production de musique."
         ],
         "projects": [
             {
