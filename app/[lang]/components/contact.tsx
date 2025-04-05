@@ -13,8 +13,8 @@ export default function Contact(props: { content: any }) {
             <span className="text-accent-green">C</span>ontact
         </h3>
 
-        <div className="flex flex-col justify-center items-center w-1/2 min-w-80 mx-auto">
-            <div className="flex flex-col w-full mb-8">
+        <div className="flex lg:flex-row flex-col lg:justify-around lg:items-center w-full lg:pt-[10%] min-w-80 mx-auto">
+            <div className="flex flex-col mb-8">
                 <h2 className="text-2xl font-bold mb-1 text-fg">
                     Email
                 </h2>
@@ -22,7 +22,7 @@ export default function Contact(props: { content: any }) {
                     {email}
                 </Link>
             </div>
-            <div className="flex flex-col w-full mb-8">
+            <div className="flex flex-col mb-8">
                 <h2 className="text-2xl font-bold mb-1 text-fg">
                     Github
                 </h2>
@@ -30,7 +30,7 @@ export default function Contact(props: { content: any }) {
                     {github.split("/").pop()}
                 </Link>
             </div>
-            <div className="flex flex-col w-full mb-8">
+            <div className="flex flex-col mb-8">
                 <h2 className="text-2xl font-bold mb-1 text-fg">
                     LinkedIn
                 </h2>
