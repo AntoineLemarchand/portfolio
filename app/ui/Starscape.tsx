@@ -107,6 +107,6 @@ export default function Starscape({ densityRatio = 0.5, sizeLimit = 5, defaultAl
         }
     }, [defaultAlpha, densityRatio, proximityRatio, sizeLimit, scaleLimit])
     return (
-        <canvas ref={canvasRef} className="fixed top-0 bg-bg" style={{zIndex: -1}}/>
+        <canvas ref={canvasRef} className="fixed top-0 bg-bg w-screen h-screen" style={{zIndex: -1}}/>
     )
 }
