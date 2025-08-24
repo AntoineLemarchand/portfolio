@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ExportedImage from "next-image-export-optimizer";
+import Link from "next/link";
 
 const ProjectSection = ({content}: {content: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -55,18 +56,18 @@ export default function Projects({content}: {content: any}) {
                             </div>
                             <div className="flex justify-around w-1/2 mx-auto">
                             { project.src &&
-                                <a href={project.src} className="text-accent-sky text-center">
+                                <Link href={project.src} className="text-accent-sky text-center">
                                     <span className="text-sm mx-1 underline">
                                         Source
                                     </span>
-                                </a>
+                                </Link>
                             }
                             { project.url &&
-                                <a href={project.url} className="text-accent-sky text-center">
+                                <Link href={project.url} className="text-accent-sky text-center">
                                     <span className="text-sm mx-1 underline">
                                         Demo
                                     </span>
-                                </a>
+                                </Link>
                             }
                             </div>
                         </div>
