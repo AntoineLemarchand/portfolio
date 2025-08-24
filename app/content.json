@@ -14,13 +14,13 @@
             {
                 "name": "Fract-ol",
                 "description": "A fractal visualization tool written in C. I allows to display multiple fractals. The displayed fractal can be zoomed and panned using the mouse.",
-                "url": "https://github.com/antoinelemarchand/fract-ol",
+                "src": "https://github.com/antoinelemarchand/fract-ol",
                 "image": "/projects/fract-ol.png"
             },
             {
                 "name": "MiniRT",
                 "description": "A minimal ray tracer written in C. The software displays a 3d scene based on an input file describing shapes and light sources. The user can then move inside the scene using the arrow keys.",
-                "url": "https://github.com/antoinelemarchand/minirt",
+                "src": "https://github.com/antoinelemarchand/minirt",
                 "image": "/projects/minirt.png"
             }
         ]
@@ -40,13 +40,13 @@
             {
                 "name": "Fract-ol",
                 "description": "Un outil de visualisation fractale écrit en C. J'autorise la création de plusieurs fractales. Le fractal affiché peut être zoomé et déplacé en utilisant la souris.",
-                "url": "https://github.com/antoinelemarchand/fract-ol",
+                "src": "https://github.com/antoinelemarchand/fract-ol",
                 "image": "/projects/fract-ol.png"
             },
             {
                 "name": "MiniRT",
                 "description": "Un rayon tracé minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
-                "url": "https://github.com/antoinelemarchand/minirt",
+                "src": "https://github.com/antoinelemarchand/minirt",
                 "image": "/projects/minirt.png"
             }
         ]

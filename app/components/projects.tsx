@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 const ProjectSection = ({content}: {content: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -40,11 +40,11 @@ export default function Projects({content}: {content: any}) {
             </h3>
 
             {content?.projects.map((project: {
-                name: string, description: string, url: string, image: string
+                name: string, description: string, url?: string, src?: string, image: string
                 }, num: number) => (
                 <ProjectSection key={num} content={
                     <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item mb-52 max-w-6xl mx-auto"} >
-                        <Image src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
+                        <ExportedImage src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
                             className={`border-4 ${borders[num % borders.length]} rounded-sm`} />
                         <div className="flex flex-col justify-between ps-2 py-8 bg-bg border-4 border-t-0 sm:border-t-4 sm:border-s-0 border-bg-dim w-full rounded-e-sm">
                             <div className="text-fg">
@@ -54,16 +54,20 @@ export default function Projects({content}: {content: any}) {
                                 </p>
                             </div>
                             <div className="flex justify-around w-1/2 mx-auto">
-                                <a href={project.url} className="text-accent-sky text-center">
+                            { project.src &&
+                                <a href={project.src} className="text-accent-sky text-center">
                                     <span className="text-sm mx-1 underline">
                                         Source
                                     </span>
                                 </a>
+                            }
+                            { project.url &&
                                 <a href={project.url} className="text-accent-sky text-center">
                                     <span className="text-sm mx-1 underline">
                                         Demo
                                     </span>
                                 </a>
+                            }
                             </div>
                         </div>
                     </div>

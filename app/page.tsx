@@ -16,9 +16,9 @@ export default function Home() {
     if (i18n.locales.includes(browserLang as Locale)) {
       setLocale(browserLang as typeof i18n.locales[number]);
     }
+    import("./content.json").then((json) => setContent(json));
   }, []);
 
-  import("./content.json").then((json) => setContent(json));
   const localizedContent = content && content[locale]
 
   return (

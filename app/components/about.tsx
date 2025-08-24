@@ -1,8 +1,8 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { Delicious_Handrawn } from 'next/font/google';
 import VanillaTilt from 'vanilla-tilt';
+import ExportedImage from 'next-image-export-optimizer';
 
 const delicious = Delicious_Handrawn({
   subsets: ['latin'],
@@ -39,7 +39,7 @@ export default function About( { content }: { content: any } ) {
             </h3>
             <div>
                 <Tilt className="w-44 md:mx-5 md:mb-0 mb-5 mx-auto p-3 bg-accent-rosewater flex flex-col items-center md:float-left" options={options}>
-                    <Image className="ps-2 pt-2 bg-fg-dim" src="/profile.svg" alt="Profile" width={150} height={150} />
+                    <ExportedImage className="ps-2 pt-2 bg-fg-dim" src="/profile.svg" alt="Profile" width={150} height={150} />
                     <p className={`${delicious.className} text-black mt-4 rotate-3 text-3xl text-center`}>
                         {content?.name}
                     </p>
