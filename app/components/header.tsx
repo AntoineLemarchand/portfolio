@@ -31,19 +31,19 @@ export default function Header(props: { content: any }) {
                 <h1 className="text-4xl sm:text-6xl text-fg ">{name}</h1>
                 <h2 className="text-3xl sm:text-5xl animate-text bg-gradient-to-r from-accent-red via-accent-peach to-accent-green bg-clip-text text-transparent">{title}</h2>
                 <div className="h-fit flex gap-8 justify-center sm:justify-end py-4">
-                    <Link className={buttonStyle + ' hover:text-accent-red'} href={github}>
+                    <Link className={buttonStyle + ' hover:text-accent-red'} href={github} aria-label="Github">
                         <FontAwesomeIcon icon={faGitAlt}/>
                     </Link>
-                    <Link className={buttonStyle + ' hover:text-accent-sky'} href={linkedin}>
+                    <Link className={buttonStyle + ' hover:text-accent-sky'} href={linkedin} aria-label="Linkedin">
                         <FontAwesomeIcon icon={faLinkedin}/>
                     </Link>
-                    <Link className={buttonStyle + ' hover:text-accent-green'} href={"mailto:" + email}>
+                    <Link className={buttonStyle + ' hover:text-accent-green'} href={"mailto:" + email} aria-label="Email">
                         <FontAwesomeIcon icon={faEnvelope}/>
                     </Link>
                 </div>
                 <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
                     <Magnet magnetStrength={10}>
-                    <a className="text-fg text-3xl cursor-pointer" onClick={() => scrollToElement('about')}>
+                    <a className="text-fg text-3xl cursor-pointer" onClick={() => scrollToElement('about')} href="#">
                         <FontAwesomeIcon icon={faChevronDown}/>
                     </a>
                     </Magnet>
