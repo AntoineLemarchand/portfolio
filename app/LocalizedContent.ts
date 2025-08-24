@@ -1,4 +1,5 @@
 import { i18n, Locale } from "@/i18n-config";
+import content from '@/app/content'
 
 export function getLocale() {
     const browserLang = navigator.language.split("-")[0];
@@ -8,9 +9,8 @@ export function getLocale() {
     return 'en';
 }
 
-export async function getLocalizedContent() {
+export function getLocalizedContent() {
     const locale = getLocale()
 
-    const json = await import("./content.json")
-    return json && json[locale];
+    return content[locale];
 }

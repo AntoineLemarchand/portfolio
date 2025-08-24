@@ -1,19 +1,13 @@
-'use client'
 import Header from "./components/header";
 import About from "./components/about";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Starscape from "./ui/Starscape";
-import { useEffect, useState } from "react";
 import { getLocalizedContent } from "./LocalizedContent";
 
 export default function Home() {
 
-  const [content, setContent] = useState<any>(null)
-
-  useEffect(() => {
-      getLocalizedContent().then((value) => setContent(value))
-  }, [])
+    const content = getLocalizedContent()
 
   return (
     <main className="flex flex-col justify-center">

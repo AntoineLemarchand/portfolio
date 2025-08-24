@@ -1,10 +1,10 @@
-{
+const content = {
     "en": {
         "name": "Antoine Lemarchand",
         "title": "Full stack web developer",
         "github": "https://github.com/antoinelemarchand",
-        "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
-        "email": "antoine.lemarchand@mailbox.org",
+            "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+            "email": "antoine.lemarchand@mailbox.org",
         "abouts": [
             "I am a software engineer based in France. I believe that developer experience is a key factor in the success of a project.",
             "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. From my work, i participate in the development of open source projects.",
@@ -15,13 +15,13 @@
                 "name": "Fract-ol",
                 "description": "A fractal visualization tool written in C. I allows to display multiple fractals. The displayed fractal can be zoomed and panned using the mouse.",
                 "src": "https://github.com/antoinelemarchand/fract-ol",
-                "image": "/images/fract-ol.png"
+                    "image": "/images/fract-ol.png"
             },
             {
                 "name": "MiniRT",
                 "description": "A minimal ray tracer written in C. The software displays a 3d scene based on an input file describing shapes and light sources. The user can then move inside the scene using the arrow keys.",
                 "src": "https://github.com/antoinelemarchand/minirt",
-                "image": "/images/minirt.png"
+                    "image": "/images/minirt.png"
             }
         ]
     },
@@ -29,8 +29,8 @@
         "name": "Antoine Lemarchand",
         "title": "Développeur web Full stack",
         "github": "https://github.com/antoinelemarchand",
-        "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
-        "email": "antoine.lemarchand@mailbox.org",
+            "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+            "email": "antoine.lemarchand@mailbox.org",
         "abouts": [
             "Je suis un développeur informatique de l'école de commerce de Paris. Je crois que l'expérience de développement est un facteur clé de succès d'un projet.",
             "J'aime travailler sur des projets personnels, tels que ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. De mon travail, je participe au développement de projets open source.",
@@ -41,14 +41,16 @@
                 "name": "Fract-ol",
                 "description": "Un outil de visualisation fractale écrit en C. J'autorise la création de plusieurs fractales. Le fractal affiché peut être zoomé et déplacé en utilisant la souris.",
                 "src": "https://github.com/antoinelemarchand/fract-ol",
-                "image": "/images/fract-ol.png"
+                    "image": "/images/fract-ol.png"
             },
             {
                 "name": "MiniRT",
                 "description": "Un rayon tracé minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
                 "src": "https://github.com/antoinelemarchand/minirt",
-                "image": "/images/minirt.png"
+                    "image": "/images/minirt.png"
             }
         ]
     }
 }
+
+export default content
