@@ -1,3 +1,4 @@
+'use client'
 import { Inter } from "next/font/google";
 import React from "react";
 import { i18n, Locale } from "@/i18n-config";
