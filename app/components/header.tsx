@@ -43,7 +43,7 @@ export default function Header(props: { content: any }) {
                 </div>
                 <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
                     <Magnet magnetStrength={10}>
-                    <a className="text-fg text-3xl cursor-pointer" onClick={() => scrollToElement('about')} href="#">
+                    <a className="text-fg text-3xl cursor-pointer" onClick={() => scrollToElement('about')} href="#" aria-label="Jump to about section">
                         <FontAwesomeIcon icon={faChevronDown}/>
                     </a>
                     </Magnet>
