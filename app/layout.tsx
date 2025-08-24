@@ -1,6 +1,6 @@
 'use client'
 import { Inter } from "next/font/google";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { i18n, Locale } from "@/i18n-config";
 import "./globals.css";
 
@@ -8,8 +8,15 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function ClientLocaleProvider({ children }: { children: React.ReactNode }) {
 
-  const browserLang = navigator.language.split("-")[0];
-  let locale = i18n.locales.includes(browserLang as Locale) ? browserLang : 'en'
+  const [locale, setLocale] = useState<Locale>('en');
+
+  useEffect(() => {
+    const browserLang = navigator.language.split("-")[0];
+    if (i18n.locales.includes(browserLang as Locale)) {
+      setLocale(browserLang as Locale);
+    }
+    document.documentElement.lang = locale; // update <html lang="">
+  }, [locale]);
 
   return (
     <html lang={locale}>

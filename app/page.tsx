@@ -6,12 +6,20 @@ import Contact from "./components/contact";
 import Starscape from "./ui/Starscape";
 import { i18n, Locale } from "@/i18n-config";
 import content from '@/app/content'
+import { useEffect, useState } from "react";
 
 export default function Home() {
 
-  const browserLang = navigator.language.split("-")[0];
-  const locale: Locale = i18n.locales.includes(browserLang as Locale) ? browserLang as Locale : 'en'
-  const localizedContent = content[locale]
+  const [localizedContent, setLocalizedContent] = useState(content.en);
+
+  useEffect(() => {
+    const browserLang = navigator.language.split("-")[0];
+    const detectedLocale: Locale = i18n.locales.includes(browserLang as Locale)
+      ? (browserLang as Locale)
+      : 'en';
+    setLocalizedContent(content[detectedLocale]);
+  }, []);
+
 
   return (
     <main className="flex flex-col justify-center">
