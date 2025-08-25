@@ -32,9 +32,9 @@ const content = {
             "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
             "email": "antoine.lemarchand@mailbox.org",
         "abouts": [
-            "Je suis un développeur informatique de l'école de commerce de Paris. Je crois que l'expérience de développement est un facteur clé de succès d'un projet.",
-            "J'aime travailler sur des projets personnels, tels que ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. De mon travail, je participe au développement de projets open source.",
-            "Je suis également intéressé par le domaine de la graphique, l'art pixel et la production de musique."
+            "Je suis un ingénieur logiciel basé en France. Je pense que l'expérience des développeurs est un facteur clé dans la réussite d'un projet.",
+            "J'aime travailler sur des projets personnels, comme ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Dans le cadre de mon travail, je participe au développement de projets open source.",
+            "Je m'intéresse également au domaine de l'infographie, du pixel art et de la production musicale, entre autres."
         ],
         "projects": [
             {
