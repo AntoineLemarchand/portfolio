@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
+import Title from "./Title";
 
 const ProjectSection = ({content}: {content: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -36,17 +37,16 @@ export default function Projects({content}: {content: any}) {
 
     return (
         <div className="w-9/12 min-w-80 relative mx-auto">
-            <h3 className="text-6xl text-fg-dim w-fit bg-white mb-32">
-                <span className="text-accent-sky">P</span>rojects
-            </h3>
+            <Title color="text-accent-sky" name={content.sections.projects} />
 
+            <div className="flex flex-col gap-32">
             {content?.projects.map((project: {
                 name: string, description: string, url?: string, src?: string, image: string
                 }, num: number) => (
                 <ProjectSection key={num} content={
-                    <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item mb-52 max-w-6xl mx-auto"} >
+                    <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item max-w-6xl mx-auto"} >
                         <ExportedImage src={project.image} alt={`${project.name}-${num}`} width={400} height={400}
-                            className={`border-4 ${borders[num % borders.length]} rounded-sm`} />
+                            className={`border-4 ${borders[num % borders.length]} rounded-sm w-full md:w-56 md:h-46`} />
                         <div className="flex flex-col justify-between ps-2 py-8 bg-bg border-4 border-t-0 sm:border-t-4 sm:border-s-0 border-bg-dim w-full rounded-e-sm">
                             <div className="text-fg">
                                 <h2 className={`text-2xl font-bold mb-4 underline ${textColors[num % textColors.length]}`}>{project.name}</h2>
@@ -74,6 +74,7 @@ export default function Projects({content}: {content: any}) {
                     </div>
                 } />
             ))}
+            </div>
         </div>
     );
 }

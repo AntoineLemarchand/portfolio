@@ -51,6 +51,10 @@ const config: Config = {
                 'webkit-user-select': 'none',
                 'ms-user-select': 'none',
             }
+        },
+        fontFamily: {
+            heading: ['Michroma', 'sans-serif'],
+            content: ['Inter', 'sans-serif'],
         }
     },
   },

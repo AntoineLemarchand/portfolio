@@ -5,6 +5,11 @@ const content = {
         "github": "https://github.com/antoinelemarchand",
             "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
             "email": "antoine.lemarchand@mailbox.org",
+        "sections": {
+            "about": "About me",
+            "projects": "Projects",
+            "contact": "Contact",
+        },
         "abouts": [
             "I am a software engineer based in France. I believe that developer experience is a key factor in the success of a project.",
             "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. From my work, i participate in the development of open source projects.",
@@ -31,6 +36,11 @@ const content = {
         "github": "https://github.com/antoinelemarchand",
             "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
             "email": "antoine.lemarchand@mailbox.org",
+        "sections": {
+            "about": "À propos",
+            "projects": "Projets",
+            "contact": "Contactez moi",
+        },
         "abouts": [
             "Je suis un ingénieur logiciel basé en France. Je pense que l'expérience des développeurs est un facteur clé dans la réussite d'un projet.",
             "J'aime travailler sur des projets personnels, comme ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Dans le cadre de mon travail, je participe au développement de projets open source.",
@@ -45,7 +55,7 @@ const content = {
             },
             {
                 "name": "MiniRT",
-                "description": "Un rayon tracé minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
+                "description": "Un raytracer minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
                 "src": "https://github.com/antoinelemarchand/minirt",
                     "image": "/images/minirt.png"
             }

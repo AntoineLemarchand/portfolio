@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-heading: 'Geo', sans-serif;
+  --font-content: 'Inter', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +31,20 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@theme inline {
+    --font-heading: var(--font-michroma);
+    --font-content: var(--font-inter);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading)
+  }
+
+  p {
+      font-family: var(--font-content)
   }
 }

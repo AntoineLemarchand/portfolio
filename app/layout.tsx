@@ -1,10 +1,11 @@
 'use client'
-import { Inter } from "next/font/google";
+import { Geo, Inter, Michroma } from "next/font/google";
 import React, { useEffect, useState } from "react";
 import { i18n, Locale } from "@/i18n-config";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: '--font-inter' })
+const geo = Geo({ subsets: ["latin"], weight: ['400'], variable: '--font-geo' })
 
 export default function ClientLocaleProvider({ children }: { children: React.ReactNode }) {
 
@@ -19,12 +20,12 @@ export default function ClientLocaleProvider({ children }: { children: React.Rea
   }, [locale]);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.variable} ${geo.variable} scroll-smooth`}>
       <head>
         <title>Antoine Lemarchand</title>
         <meta name="description" content="My portfolio"/>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

@@ -15,13 +15,6 @@ export default function Header(props: { content: any }) {
     const github = props.content?.github ?? "";
     const linkedin = props.content?.linkedin ?? "";
 
-
-    function scrollToElement(id: string) {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
     return (
         <div className="min-h-screen w-auto flex lg:flex-row flex-col justify-center items-center relative px-8 mx-auto gap-2">
             <Magnet magnetStrength={-10}>
@@ -43,7 +36,7 @@ export default function Header(props: { content: any }) {
                 </div>
                 <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
                     <Magnet magnetStrength={10}>
-                    <a className="text-fg text-3xl cursor-pointer" onClick={() => scrollToElement('about')} href="#" aria-label="Jump to about section">
+                    <a className="text-fg text-3xl cursor-pointer" href="#about" aria-label="Jump to about section">
                         <FontAwesomeIcon icon={faChevronDown}/>
                     </a>
                     </Magnet>
