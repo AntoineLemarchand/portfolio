@@ -1,66 +1,80 @@
 const content = {
-    "en": {
-        "name": "Antoine Lemarchand",
-        "title": "Full stack web developer",
-        "github": "https://github.com/antoinelemarchand",
-            "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
-            "email": "antoine.lemarchand@mailbox.org",
-        "sections": {
-            "about": "About me",
-            "projects": "Projects",
-            "contact": "Contact",
-        },
-        "abouts": [
-            "I am a software engineer based in France. I believe that developer experience is a key factor in the success of a project.",
-            "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. From my work, i participate in the development of open source projects.",
-            "I am also interested in the field of computer graphics, pixel art and music production among other things."
-        ],
-        "projects": [
-            {
-                "name": "Fract-ol",
-                "description": "A fractal visualization tool written in C. I allows to display multiple fractals. The displayed fractal can be zoomed and panned using the mouse.",
-                "src": "https://github.com/antoinelemarchand/fract-ol",
-                    "image": "/images/fract-ol.png"
-            },
-            {
-                "name": "MiniRT",
-                "description": "A minimal ray tracer written in C. The software displays a 3d scene based on an input file describing shapes and light sources. The user can then move inside the scene using the arrow keys.",
-                "src": "https://github.com/antoinelemarchand/minirt",
-                    "image": "/images/minirt.png"
-            }
-        ]
+  "en": {
+    "name": "Antoine Lemarchand",
+    "title": "Full stack web developer",
+    "github": "https://github.com/antoinelemarchand",
+    "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+    "email": "antoine.lemarchand@mailbox.org",
+    "sections": {
+      "about": "About me",
+      "projects": "Projects",
+      "contact": "Contact",
     },
-    "fr": {
-        "name": "Antoine Lemarchand",
-        "title": "Développeur web Full stack",
-        "github": "https://github.com/antoinelemarchand",
-            "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
-            "email": "antoine.lemarchand@mailbox.org",
-        "sections": {
-            "about": "À propos",
-            "projects": "Projets",
-            "contact": "Contactez moi",
-        },
-        "abouts": [
-            "Je suis un ingénieur logiciel basé en France. Je pense que l'expérience des développeurs est un facteur clé dans la réussite d'un projet.",
-            "J'aime travailler sur des projets personnels, comme ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Dans le cadre de mon travail, je participe au développement de projets open source.",
-            "Je m'intéresse également au domaine de l'infographie, du pixel art et de la production musicale, entre autres."
-        ],
-        "projects": [
-            {
-                "name": "Fract-ol",
-                "description": "Un outil de visualisation fractale écrit en C. J'autorise la création de plusieurs fractales. Le fractal affiché peut être zoomé et déplacé en utilisant la souris.",
-                "src": "https://github.com/antoinelemarchand/fract-ol",
-                    "image": "/images/fract-ol.png"
-            },
-            {
-                "name": "MiniRT",
-                "description": "Un raytracer minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
-                "src": "https://github.com/antoinelemarchand/minirt",
-                    "image": "/images/minirt.png"
-            }
-        ]
-    }
+    "abouts": [
+      "I am a software engineer based in France. I believe that developer experience is a key factor in the success of a project.",
+      "I like to work on personal projects, such as this website, to learn new technologies and improve my skills. From my work, i participate in the development of open source projects.",
+      "I am also interested in the field of computer graphics, pixel art and music production among other things."
+    ],
+    "projects": [
+      {
+        "name": "AlgoVisu",
+        "description": "shows how sorting and pathfinding algorithms work by animating each step. It helps you understand the process and logic behind the algorithms through clear, interactive visuals.",
+        "url": "https://algovisu.antoinelemarchand.xyz",
+        "src": "https://github.com/AntoineLemarchand/AlgoVisu",
+        "image": "/images/algovisu.png"
+      },
+      {
+        "name": "Fract-ol",
+        "description": "A fractal visualization tool written in C. I allows to display multiple fractals. The displayed fractal can be zoomed and panned using the mouse.",
+        "src": "https://github.com/antoinelemarchand/fract-ol",
+        "image": "/images/fract-ol.png"
+      },
+      {
+        "name": "MiniRT",
+        "description": "A minimal ray tracer written in C. The software displays a 3d scene based on an input file describing shapes and light sources. The user can then move inside the scene using the arrow keys.",
+        "src": "https://github.com/antoinelemarchand/minirt",
+        "image": "/images/minirt.png"
+      }
+    ]
+  },
+  "fr": {
+    "name": "Antoine Lemarchand",
+    "title": "Développeur web Full stack",
+    "github": "https://github.com/antoinelemarchand",
+    "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+    "email": "antoine.lemarchand@mailbox.org",
+    "sections": {
+      "about": "À propos",
+      "projects": "Projets",
+      "contact": "Contactez moi",
+    },
+    "abouts": [
+      "Je suis un ingénieur logiciel basé en France. Je pense que l'expérience des développeurs est un facteur clé dans la réussite d'un projet.",
+      "J'aime travailler sur des projets personnels, comme ce site web, pour apprendre de nouvelles technologies et améliorer mes compétences. Dans le cadre de mon travail, je participe au développement de projets open source.",
+      "Je m'intéresse également au domaine de l'infographie, du pixel art et de la production musicale, entre autres."
+    ],
+    "projects": [
+      {
+        "name": "AlgoVisu",
+        "description": "montre le fonctionnement des algorithmes de tri et de recherche de chemin en animant chaque étape. Il permet de comprendre le processus et la logique des algorithmes grâce à des visuels clairs et interactifs.",
+        "url": "https://algovisu.antoinelemarchand.xyz",
+        "src": "https://github.com/AntoineLemarchand/AlgoVisu",
+        "image": "/images/algovisu.png"
+      },
+      {
+        "name": "Fract-ol",
+        "description": "Un outil de visualisation fractale écrit en C. J'autorise la création de plusieurs fractales. Le fractal affiché peut être zoomé et déplacé en utilisant la souris.",
+        "src": "https://github.com/antoinelemarchand/fract-ol",
+        "image": "/images/fract-ol.png"
+      },
+      {
+        "name": "MiniRT",
+        "description": "Un raytracer minimal écrit en C. Le logiciel affiche une scène 3d basée sur un fichier d'entrée décrivant des formes et des sources de lumière. L'utilisateur peut alors se déplacer dans la scène en utilisant les touches fléchées.",
+        "src": "https://github.com/antoinelemarchand/minirt",
+        "image": "/images/minirt.png"
+      }
+    ]
+  }
 }
 
 export default content
