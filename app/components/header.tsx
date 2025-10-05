@@ -16,31 +16,31 @@ export default function Header(props: { content: any }) {
     const linkedin = props.content?.linkedin ?? "";
 
     return (
-        <div className="min-h-screen w-auto flex lg:flex-row flex-col justify-center items-center relative px-8 mx-auto gap-2">
+        <div className="min-h-screen w-auto flex lg:flex-row flex-col justify-center items-center relative px-8 mx-auto sm:gap-14 gap-2">
             <Magnet magnetStrength={-10}>
               <ExportedImage src="/sprites/isle.svg" alt="Me on a floating island" width={300} height={300} className="animate-float w-auto h-80" placeholder="blur" priority/>
             </Magnet>
-            <div className="h-fit lg:text-left text-center">
+            <div className="relative h-fit lg:text-left text-center">
                 <h1 className="text-4xl sm:text-6xl text-fg ">{name}</h1>
                 <h2 className="text-3xl sm:text-5xl animate-text bg-gradient-to-r from-accent-red via-accent-peach to-accent-green bg-clip-text text-transparent">{title}</h2>
-                <div className="h-fit flex gap-8 justify-center sm:justify-end py-4">
+                <div className="sm:absolute sm:right-0 sm:-bottom-28 h-fit flex gap-6 justify-center sm:justify-end py-4">
                     <Link className={buttonStyle + ' hover:text-accent-red'} href={github} aria-label="Github">
-                        <FontAwesomeIcon icon={faGitAlt}/>
+                        <FontAwesomeIcon icon={faGitAlt} size="sm"/>
                     </Link>
                     <Link className={buttonStyle + ' hover:text-accent-sky'} href={linkedin} aria-label="Linkedin">
-                        <FontAwesomeIcon icon={faLinkedin}/>
+                        <FontAwesomeIcon icon={faLinkedin} size="xs"/>
                     </Link>
                     <Link className={buttonStyle + ' hover:text-accent-green'} href={"mailto:" + email} aria-label="Email">
-                        <FontAwesomeIcon icon={faEnvelope}/>
+                        <FontAwesomeIcon icon={faEnvelope} size="xs"/>
                     </Link>
                 </div>
-                <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
-                    <Magnet magnetStrength={10}>
-                    <a className="text-fg text-3xl cursor-pointer" href="#about" aria-label="Jump to about section">
-                        <FontAwesomeIcon icon={faChevronDown}/>
-                    </a>
-                    </Magnet>
-                </div>
+            </div>
+            <div className="absolute hidden h-fit md:flex justify-center items-center bottom-8 left-1/2 right-1/2">
+                <Magnet magnetStrength={10}>
+                <a className="text-fg text-3xl cursor-pointer" href="#about" aria-label="Jump to about section">
+                    <FontAwesomeIcon icon={faChevronDown}/>
+                </a>
+                </Magnet>
             </div>
         </div>
     );
