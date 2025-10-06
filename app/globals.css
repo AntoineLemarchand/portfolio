@@ -1,50 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --font-heading: 'Geo', sans-serif;
-  --font-content: 'Inter', sans-serif;
-}
+@theme {
+  --font-heading: var(--font-geo);
+  --font-content: var(--font-inter);
+  --font-handdrawn: var(--font-delicious);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  --color-bg: #1F1F28;
+  --color-fg: #cdd6f4;
+  --color-bg-dim: #434356;
+  --color-fg-dim: #9399b2;
+  --color-accent-red: #f38ba8;
+  --color-accent-peach: #fab387;
+  --color-accent-green: #a6e3a1;
+  --color-accent-sky: #89dceb;
+  --color-accent-rosewater: #f5e0dc;
+  --color-black: #000;
+  --color-transparent: transparent;
+
+  --animate-float: float 2s infinite;
+  --animate-text: text 5s ease infinite;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px)
+    }
+    50% {
+      transform: translateY(-5px)
+    }
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @keyframes text {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
   }
-}
-
-@theme inline {
-    --font-heading: var(--font-michroma);
-    --font-content: var(--font-inter);
 }
 
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-      font-family: var(--font-heading)
+  * {
+    @apply font-content;
   }
-
-  p {
-      font-family: var(--font-content)
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }

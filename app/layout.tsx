@@ -3,6 +3,51 @@ import React, { useEffect, useState } from "react";
 import { i18n, Locale } from "@/i18n-config";
 import "./globals.css";
 
+import localFont from "next/font/local"
+
+const delicious = localFont({
+  variable: '--font-delicious',
+  src: [
+    {
+      path: '../public/fonts/DeliciousHandrawn-Regular.ttf',
+      weight: '400',
+      style: 'normal'
+    },
+  ]
+})
+
+const inter = localFont({
+  variable: '--font-inter',
+  src: [
+    {
+      path: '../public/fonts/Inter/Inter-VariableFont_opsz,wght.ttf',
+      weight: '400 700',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf',
+      weight: '400 700',
+      style: 'italic'
+    },
+  ]
+})
+
+const geo = localFont({
+  variable: '--font-geo',
+  src: [
+    {
+      path: '../public/fonts/Geo/Geo-Regular.ttf',
+      weight: '400',
+      style: 'normal'
+    },
+    {
+      path: '../public/fonts/Geo/Geo-Italic.ttf',
+      weight: '400',
+      style: 'italic'
+    },
+  ]
+})
+
 export default function ClientLocaleProvider({ children }: { children: React.ReactNode }) {
 
   const [locale, setLocale] = useState<Locale>('en');
@@ -16,7 +61,7 @@ export default function ClientLocaleProvider({ children }: { children: React.Rea
   }, [locale]);
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className={`${[delicious.variable, inter.variable, geo.variable].filter(Boolean).join(' ')} scroll-smooth`}>
       <head>
         <title>Antoine Lemarchand</title>
         <meta name="description" content="My portfolio"/>
