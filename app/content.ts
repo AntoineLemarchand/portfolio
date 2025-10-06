@@ -56,7 +56,7 @@ const content = {
     "projects": [
       {
         "name": "AlgoVisu",
-        "description": "montre le fonctionnement des algorithmes de tri et de recherche de chemin en animant chaque étape. Il permet de comprendre le processus et la logique des algorithmes grâce à des visuels clairs et interactifs.",
+        "description": "Une application web qui montre le fonctionnement des algorithmes de tri et de recherche de chemin en animant chaque étape. Il permet de comprendre le processus et la logique des algorithmes grâce à des visuels clairs et interactifs.",
         "url": "https://algovisu.antoinelemarchand.xyz",
         "src": "https://github.com/AntoineLemarchand/AlgoVisu",
         "image": "/images/algovisu.png"

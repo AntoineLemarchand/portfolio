@@ -5,7 +5,8 @@
   --font-content: var(--font-inter);
   --font-handdrawn: var(--font-delicious);
 
-  --color-bg: #1F1F28;
+  --color-bg: #1e1e2e;
+  --color-bg-dark: #1a121c;
   --color-fg: #cdd6f4;
   --color-bg-dim: #434356;
   --color-fg-dim: #9399b2;
