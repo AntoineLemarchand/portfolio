@@ -7,6 +7,7 @@ import localFont from "next/font/local"
 
 const delicious = localFont({
   variable: '--font-delicious',
+  preload: false,
   src: [
     {
       path: '../public/fonts/DeliciousHandrawn-Regular.ttf',
@@ -18,6 +19,7 @@ const delicious = localFont({
 
 const inter = localFont({
   variable: '--font-inter',
+  preload: false,
   src: [
     {
       path: '../public/fonts/Inter/Inter-VariableFont_opsz,wght.ttf',
@@ -34,6 +36,7 @@ const inter = localFont({
 
 const geo = localFont({
   variable: '--font-geo',
+  preload: false,
   src: [
     {
       path: '../public/fonts/Geo/Geo-Regular.ttf',
@@ -61,7 +64,7 @@ export default function ClientLocaleProvider({ children }: { children: React.Rea
   }, [locale]);
 
   return (
-    <html lang={locale} className={`${[delicious.variable, inter.variable, geo.variable].filter(Boolean).join(' ')} scroll-smooth`}>
+    <html lang={locale} className={`${[delicious.variable, inter.variable, geo.variable].filter(Boolean).join(' ')} scroll-smooth relative`}>
       <head>
         <title>Antoine Lemarchand</title>
         <meta name="description" content="My portfolio"/>

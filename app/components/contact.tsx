@@ -28,7 +28,7 @@ export default function Contact({ content }: { content: any }) {
 
   return (
     <div className="w-9/12 relative mx-auto min-h-screen flex flex-col justify-center align-middle">
-      <h3 className="text-6xl text-fg-dim mb-8">{content.sections.contact}</h3>
+      <h3 className="text-6xl text-fg mb-8">{content.sections.contact}</h3>
 
       <div className="w-full min-w-80 mx-auto flex justify-center flex-wrap gap-6">
         {contacts.map((item, index) => (

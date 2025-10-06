@@ -13,7 +13,7 @@ const ProjectSection = ({children}: {children: React.ReactNode}) => {
     const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.95, 1, 1, 0.95]);
 
     return (
-        <section ref={ref}>
+        <section ref={ref} className="block">
             <motion.div style={{scale}}>
                 {children}
             </motion.div>
@@ -32,7 +32,7 @@ export default function Projects({content}: {content: any}) {
 
     return (
         <div className="w-9/12 min-w-80 relative mx-auto">
-            <h3 className="text-6xl text-fg-dim mb-8"> {content.sections.projects} </h3>
+            <h3 className="text-6xl text-fg mb-8"> {content.sections.projects} </h3>
             <div className="flex flex-col gap-32">
             {content?.projects.map((project: {
                 name: string, description: string, url?: string, src?: string, image: string
@@ -42,14 +42,14 @@ export default function Projects({content}: {content: any}) {
                     <Link href={project.url || project.src || ""} >
                       <Tilt className="md:w-44 h-56 md:mx-5 mb-0 mx-auto p-3 bg-bg-dim flex flex-col items-center md:float-left">
                             <div className="h-full w-full relative">
-                              <ExportedImage className="pt-2 select-none object-cover" src={project.image} alt={`${project.name} ${num}`} fill />
+                              <ExportedImage className="pt-2 select-none object-cover" src={project.image} alt={`${project.name} ${num}`} fill sizes="480"/>
                             </div>
                             <p className={`font-handdrawn text-fg mt-4 rotate-3 text-3xl text-center hidden md:block`}>
                               {project.name}
                             </p>
                       </Tilt>
                     </Link>
-                    <div className="flex flex-col justify-between px-2 py-2 bg-bg-dim/70 w-full">
+                    <div className="flex flex-col justify-between px-2 py-2 bg-bg-dim/90 w-full">
                       <div className="text-fg">
                         <h2 className={`text-2xl font-bold mb-4 underline ${textColors[num % textColors.length]}`}>{project.name}</h2>
                         <p>
@@ -58,8 +58,8 @@ export default function Projects({content}: {content: any}) {
                       </div>
                       <div className="flex justify-around ms-auto">
                       { project.src &&
-                        <Link href={project.src} className="text-fg hover:text-accent-sky transition-all">
-                            <FontAwesomeIcon icon={faGitAlt} size="xl"/>
+                        <Link href={project.src} className="text-fg hover:text-accent-sky transition-all" aria-label={`${project.name}'s sources`}>
+                            <FontAwesomeIcon icon={faGitAlt} size="xl" aria-label={`${project.name}'s sources`}/>
                         </Link>
                       }
                       </div>
