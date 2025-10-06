@@ -40,11 +40,11 @@ export default function Projects({content}: {content: any}) {
                 <ProjectSection key={num}>
                     <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item max-w-6xl mx-auto"} >
                     <Link href={project.url || project.src || ""} >
-                      <Tilt className="md:w-44 h-56 md:mx-5 md:mb-0 mb-5 mx-auto p-3 bg-bg-dim flex flex-col items-center md:float-left">
+                      <Tilt className="md:w-44 h-56 md:mx-5 mb-0 mx-auto p-3 bg-bg-dim flex flex-col items-center md:float-left">
                             <div className="h-full w-full relative">
                               <ExportedImage className="pt-2 select-none object-cover" src={project.image} alt={`${project.name} ${num}`} fill />
                             </div>
-                            <p className={`font-handdrawn text-black mt-4 rotate-3 text-3xl text-center`}>
+                            <p className={`font-handdrawn text-fg mt-4 rotate-3 text-3xl text-center hidden md:block`}>
                               {project.name}
                             </p>
                       </Tilt>
