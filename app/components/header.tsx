@@ -18,7 +18,7 @@ export default function Header(props: { content: any }) {
     return (
         <div className="min-h-screen w-auto flex lg:flex-row flex-col justify-center items-center relative px-8 mx-auto sm:gap-14 gap-2">
             <Magnet magnetStrength={-10}>
-              <ExportedImage src="/sprites/isle.svg" alt="Me on a floating island" width={300} height={300} className="animate-float w-auto h-80" placeholder="blur" priority/>
+              <ExportedImage src="/sprites/isle.svg" alt="Me on a floating island" width={300} height={300} className="animate-float w-auto h-80" placeholder="blur" priority fetchPriority="high"/>
             </Magnet>
             <div className="relative h-fit lg:text-left text-center">
                 <h1 className="text-4xl sm:text-6xl text-fg ">{name}</h1>
