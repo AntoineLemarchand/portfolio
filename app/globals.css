@@ -2,7 +2,7 @@
 
 @theme {
   --font-heading: var(--font-geo);
-  --font-content: var(--font-inter);
+  --font-content: "Arial", sans-serif;
   --font-handdrawn: var(--font-delicious);
 
   --color-bg: #11111b;

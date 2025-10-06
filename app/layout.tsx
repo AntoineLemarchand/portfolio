@@ -17,23 +17,6 @@ const delicious = localFont({
   ]
 })
 
-const inter = localFont({
-  variable: '--font-inter',
-  preload: false,
-  src: [
-    {
-      path: '../public/fonts/Inter/Inter-VariableFont_opsz,wght.ttf',
-      weight: '400 700',
-      style: 'normal'
-    },
-    {
-      path: '../public/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf',
-      weight: '400 700',
-      style: 'italic'
-    },
-  ]
-})
-
 const geo = localFont({
   variable: '--font-geo',
   preload: false,
@@ -64,7 +47,7 @@ export default function ClientLocaleProvider({ children }: { children: React.Rea
   }, [locale]);
 
   return (
-    <html lang={locale} className={`${[delicious.variable, inter.variable, geo.variable].filter(Boolean).join(' ')} scroll-smooth relative`}>
+    <html lang={locale} className={`${[delicious.variable, geo.variable].filter(Boolean).join(' ')} scroll-smooth relative`}>
       <head>
         <title>Antoine Lemarchand</title>
         <meta name="description" content="My portfolio"/>
