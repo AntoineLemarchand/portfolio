@@ -3,9 +3,9 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
-import Title from "./Title";
+import Tilt from "./Tilt";
 
-const ProjectSection = ({content}: {content: React.ReactNode}) => {
+const ProjectSection = ({children}: {children: React.ReactNode}) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress } = useScroll({target: ref, offset: ["start end", "end start"]});
     const scale = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [0.95, 1, 1, 0.95]);
@@ -13,7 +13,7 @@ const ProjectSection = ({content}: {content: React.ReactNode}) => {
     return (
         <section ref={ref}>
             <motion.div style={{scale}}>
-                {content}
+                {children}
             </motion.div>
         </section>
     );
@@ -37,14 +37,19 @@ export default function Projects({content}: {content: any}) {
 
     return (
         <div className="w-9/12 min-w-80 relative mx-auto">
-            <Title color="text-accent-sky" name={content.sections.projects} />
-
+            <h3 className="text-6xl text-fg-dim mb-8"> {content.sections.projects} </h3>
             <div className="flex flex-col gap-32">
             {content?.projects.map((project: {
                 name: string, description: string, url?: string, src?: string, image: string
                 }, num: number) => (
-                <ProjectSection key={num} content={
+                <ProjectSection key={num}>
                     <div className={"flex flex-col sm:flex-row items-stretch justify-around project-item max-w-6xl mx-auto"} >
+                        <Tilt className="w-44 md:mx-5 md:mb-0 mb-5 mx-auto p-3 bg-accent-rosewater flex flex-col items-center md:float-left">
+                          <ExportedImage src={project.image} alt={`${project.name}-${num}`} fill={true} />
+                          <p className={`text-black mt-4 rotate-3 text-3xl text-center`}>
+                              {project.name}
+                          </p>
+                        </Tilt>
                         <div className={`relative border-4 ${borders[num % borders.length]} rounded-sm md:w-72 md:h-56 w-full h-64`}>
                           <ExportedImage src={project.image} alt={`${project.name}-${num}`} fill={true} />
                         </div>
@@ -73,7 +78,7 @@ export default function Projects({content}: {content: any}) {
                             </div>
                         </div>
                     </div>
-                } />
+                </ProjectSection>
             ))}
             </div>
         </div>

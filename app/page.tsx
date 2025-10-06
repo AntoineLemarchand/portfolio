@@ -24,10 +24,12 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center">
         <Starscape densityRatio={.3} defaultAlpha={.1} proximityRatio={.25}/>
-        <Header content={localizedContent} />
-        <About content={localizedContent} />
-        <Projects content={localizedContent} />
-        <Contact content={localizedContent} />
+        <div className="max-w-[70rem] mx-auto">
+          <Header content={localizedContent} />
+          <About content={localizedContent} />
+          <Projects content={localizedContent} />
+          <Contact content={localizedContent} />
+        </div>
     </main>
   );
 }

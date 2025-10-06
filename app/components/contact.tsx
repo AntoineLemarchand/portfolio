@@ -1,13 +1,12 @@
 import React from "react";
 
 import Link from "next/link";
-import Title from "./Title";
 
 export default function Contact({content}: { content: any }) {
 
   return (
     <div className="md:inline block min-h-screen w-9/12 min-w-80 mx-auto py-32">
-        <Title color="text-accent-green" name={content.sections.contact} />
+        <h3 className="text-6xl text-fg-dim mb-8"> {content.sections.contact} </h3>
 
         <div className="flex lg:flex-row flex-col lg:justify-around lg:items-center w-full lg:pt-[10%] min-w-80 mx-auto">
             <div className="flex flex-col mb-8">
