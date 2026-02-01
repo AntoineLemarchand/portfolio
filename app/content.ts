@@ -3,7 +3,7 @@ const content = {
     "name": "Antoine Lemarchand",
     "title": "Full stack web developer",
     "github": "https://github.com/antoinelemarchand",
-    "linkedin": "https://www.linkedin.com/in/antoinelemarchand",
+    "linkedin": "https://www.linkedin.com/in/alemarchand",
     "email": "antoine.lemarchand@mailbox.org",
     "sections": {
       "about": "About me",
