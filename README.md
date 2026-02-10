@@ -7,18 +7,7 @@ Showcases projects, skills, and personal achievements with interactive elements 
 
 ![Portfolio Demo](/imgs/portfolio-demo.gif)
 
----
-
-## ✨ Features
-- Responsive layout for desktop and mobile  
-- Space-themed animations and effects  
-- Project showcase with interactive cards  
-- Smooth scrolling and section navigation  
-- Contact form integration  
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18+ recommended)
