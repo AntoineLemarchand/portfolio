@@ -5,8 +5,6 @@
 A **Next.js** portfolio website with a **space-themed design**.  
 Showcases projects, skills, and personal achievements with interactive elements and smooth animations.
 
-![Portfolio Demo](/imgs/portfolio-demo.gif)
-
 ## Quick Start
 
 ### Prerequisites
