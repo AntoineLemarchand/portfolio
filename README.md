@@ -1,5 +1,5 @@
 ![Miniature](imgs/miniature.png)
-# 🚀 Space Portfolio
+# Portfolio
 
 ## Description
 A **Next.js** portfolio website with a **space-themed design**.  
